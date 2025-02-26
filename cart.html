@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СтройМастер - Корзина</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">СтройМастер</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html" class="cart-link">Корзина (0)</a></li>
+            </ul>
+            <div class="hotline">Горячая линия: 8-800-555-12-34</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <h1>Ваша корзина</h1>
+            <div id="cart-items" class="cart-items"></div>
+            <p id="cart-total">Общая сумма: 0 руб</p>
+
+            <h2>Оформить заказ</h2>
+            <form id="order-form" action="https://formspree.io/f/xvgvojdi" method="POST">
+                <input type="hidden" name="_next" value="https://parazzzit7.github.io/stroika-site/cart.html">
+                <input type="hidden" name="cart" id="cart-data">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Введите ваш телефон">
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 СтройМастер. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
