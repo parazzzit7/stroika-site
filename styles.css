@@ -1,0 +1,224 @@
+/* Добавляем в начало файла */
+body {
+    background-image: url('texture.jpg'); /* Путь к текстуре */
+    background-size: cover; /* Растягиваем на весь экран */
+    background-attachment: fixed; /* Фиксируем фон при прокрутке */
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый слой */
+    background-blend-mode: overlay; /* Смешиваем текстуру с цветом */
+}
+/* Сброс стилей и базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif; /* Современный шрифт */
+}
+
+/* Шапка */
+header {
+    background-color: #2c3e50; /* Тёмно-синий для профессионализма */
+    color: white;
+    padding: 1.5rem 2rem;
+    position: sticky; /* Фиксированная шапка при прокрутке */
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.nav-menu a:hover {
+    color: #3498db; /* Голубой при наведении */
+}
+
+/* Главная секция */
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #3498db, #2c3e50); /* Градиент */
+    color: white;
+    animation: fadeIn 1s ease-in; /* Анимация появления */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для текста */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #e74c3c; /* Яркий красный для кнопки */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px; /* Скруглённые углы */
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
+}
+
+/* Каталог */
+.catalog {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    border-radius: 10px;
+}
+
+.catalog h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    border: none;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для карточек */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Поднятие при наведении */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin: 1rem 0;
+    color: #2c3e50;
+}
+
+.product-card p {
+    color: #7f8c8d;
+}
+
+/* Контакты */
+.contacts {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    border-radius: 10px;
+}
+
+.contacts h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.contacts p {
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+    color: #7f8c8d;
+}
+
+/* Доставка */
+.about, .delivery {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.about h1, .delivery h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.about p, .delivery p {
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+    color: #7f8c8d;
+}
+
+/* Футер */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .product-card {
+        padding: 1rem;
+    }
+}
+
+.product-card .description {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
